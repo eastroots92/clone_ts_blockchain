@@ -1,0 +1,9 @@
+{
+  "name": "ts_blockchain",
+  "version": "1.0.0",
+  "description": "Learin Typescript by making a Blockchain",
+  "main": "index.js",
+  "repository": "git@github.com:eastroots92/clone_ts_blockchain.git",
+  "author": "Eastroots92 <eastroots92@gmail.com>",
+  "license": "MIT"
+}
