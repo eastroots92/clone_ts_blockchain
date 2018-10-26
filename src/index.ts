@@ -1,19 +1,31 @@
-interface Human {
-  name: string,
-  age: number,
-  gender: string
+class Human {
+  private name: string;
+  private age: number;
+  private gender: string;
+  constructor(name: string,
+    age: number,
+    gender: string) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+    };
+  get getName(): string {
+    return this.name;
+  }
+  get getAge(): number {
+    return this.age;
+  }
+  get getGender(): string {
+    return this.gender;
+  }
 }
 
-const person = {
-  name: "이동근",
-  age: 27,
-  gender: "male"
+const myInfo = new Human("동근", 27, "male");
+
+const sayHi = (info: Human): string => {
+  return `Hello ${info.getName}, you are ${info.getAge}, you are a ${info.getGender}.`;
 }
 
-const sayHi = (personInfo: Human): string => {
-  return `Hello ${personInfo.name}, you are ${personInfo.age}, you are a ${personInfo.gender}.`;
-}
-
-console.log(sayHi(person));
+console.log(sayHi(myInfo));
 
 export {};
